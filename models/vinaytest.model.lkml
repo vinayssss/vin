@@ -230,7 +230,9 @@ explore: inventory_items {
   }
 }
 
-explore: users {}
+explore: users {
+ # persist_for: "2 hours"
+}
 
 explore: transaction_detail {
   join: transaction_detail__items {
