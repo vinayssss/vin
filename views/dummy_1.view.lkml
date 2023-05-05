@@ -31,7 +31,7 @@ view: dummy_1 {
   }
   dimension: countryss {
     type: string
-    sql: ${country} ;;
+    sql: ${TABLE}.country ;;
   }
   filter: country_filter {
     type: string
