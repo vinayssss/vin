@@ -249,3 +249,4 @@ explore: products {
     relationship: many_to_one
   }
 }
+explore: dummy_1 {}
