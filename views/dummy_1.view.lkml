@@ -21,11 +21,11 @@ view: dummy_1 {
     type: number
   }
   dimension: country_1 {
-    type: string
-    sql: ${country} ;;
+    type: number
+    sql: ${id} ;;
   }
   filter: countrys {
-    type: string
+    type: number
     suggest_dimension: country_1
   }
 }
