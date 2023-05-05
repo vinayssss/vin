@@ -16,7 +16,7 @@ view: dummy_1 {
   }
   filter: id_filter {
     type: number
-    suggest_dimension: id
+    suggest_dimension: dummy_1.id
   }
   dimension: country {
     description: ""
@@ -25,7 +25,7 @@ view: dummy_1 {
   }
   filter: country_filter {
     type: string
-    suggest_dimension: country
+    suggest_dimension: dummy_1.country
   }
   dimension: total_sale_price {
     description: ""
