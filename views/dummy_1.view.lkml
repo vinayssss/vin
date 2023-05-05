@@ -13,6 +13,7 @@ view: dummy_1 {
     description: ""
     type: number
     sql: ${TABLE}.id ;;
+    suggest_explore: order_items
   }
   filter: id_filter {
     type: number
