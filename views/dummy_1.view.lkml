@@ -20,12 +20,12 @@ view: dummy_1 {
     description: ""
     type: number
   }
-  dimension: country_1 {
+  dimension: ids {
     type: number
     sql: ${id} ;;
   }
-  filter: countrys {
+  filter: idss {
     type: number
-    suggest_dimension: country_1
+    suggest_dimension: ids
   }
 }
