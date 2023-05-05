@@ -12,6 +12,7 @@ view: dummy_1 {
   dimension: id {
     description: ""
     type: number
+    sql: ${TABLE}.id ;;
   }
   filter: id_filter {
     type: number
@@ -19,6 +20,8 @@ view: dummy_1 {
   }
   dimension: country {
     description: ""
+    type: string
+    sql: ${TABLE}.country ;;
   }
   filter: country_filter {
     type: string
