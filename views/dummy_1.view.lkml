@@ -27,5 +27,14 @@ view: dummy_1 {
   filter: idss {
     type: number
     suggest_dimension: ids
+
+  }
+  dimension: countryss {
+    type: string
+    sql: ${country} ;;
+  }
+  filter: country_filter {
+    type: string
+    suggest_dimension: countryss
   }
 }
