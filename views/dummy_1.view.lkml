@@ -13,28 +13,36 @@ view: dummy_1 {
     description: ""
     type: number
   }
+  filter: id_filter {
+    type: number
+    suggest_dimension: id
+  }
   dimension: country {
     description: ""
+  }
+  filter: country_filter {
+    type: string
+    suggest_dimension: country
   }
   dimension: total_sale_price {
     description: ""
     type: number
   }
-  dimension: ids {
-    type: number
-    sql: ${id} ;;
-  }
-  filter: idss {
-    type: number
-    suggest_dimension: ids
+  # dimension: ids {
+  #   type: number
+  #   sql: ${id} ;;
+  # }
+  # filter: idss {
+  #   type: number
+  #   suggest_dimension: ids
 
-  }
-  dimension: countryss {
-    type: string
-    sql: ${TABLE}.country ;;
-  }
-  filter: country_filter {
-    type: string
-    suggest_dimension: countryss
-  }
+  # }
+  # dimension: countryss {
+  #   type: string
+  #   sql: ${TABLE}.country ;;
+  # }
+  # filter: country_filter {
+  #   type: string
+  #   suggest_dimension: countryss
+  #}
 }
