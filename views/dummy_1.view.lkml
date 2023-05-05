@@ -1,18 +1,31 @@
-view: dummy_1 {
-    derived_table: {
-      sql:
-      SELECT
-        customer_id,
-        SUM(sale_price) AS lifetime_spend
-      FROM
-        order
-      WHERE
-        {% condition order_region %} order.region {% endcondition %}
-      GROUP BY 1
-    ;;
-    }
+# If necessary, uncomment the line below to include explore_source.
+# include: "vinaytest.model.lkml"
 
-    filter: order_region {
-      type: string
+view: dummy_1 {
+  derived_table: {
+    explore_source: order_items {
+      column: id { field: users.id }
+      column: country { field: users.country }
+      column: total_sale_price {}
     }
   }
+  dimension: id {
+    description: ""
+    type: number
+  }
+  dimension: country {
+    description: ""
+  }
+  dimension: total_sale_price {
+    description: ""
+    type: number
+  }
+  dimension: country_1 {
+    type: string
+    sql: ${country} ;;
+  }
+  filter: countrys {
+    type: string
+    suggest_dimension: country_1
+  }
+}
