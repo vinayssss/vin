@@ -23,6 +23,7 @@ view: dummy_1 {
     description: ""
     type: string
     sql: ${TABLE}.country ;;
+    suggest_explore: order_items
   }
   filter: country_filter {
     type: string
