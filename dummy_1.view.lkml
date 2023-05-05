@@ -1,4 +1,4 @@
-view: dummy {
+view: dummy_1 {
     derived_table: {
       sql:
       SELECT
