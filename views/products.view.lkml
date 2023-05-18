@@ -38,13 +38,9 @@ dimension: unqiue {
   type: string
   sql:
   SELECT ${brand}
-  FROM ${TABLE}.products
-  UNION
-  SELECT ${brand1}
-  From ${TABLE}.products
-  UNION ALL
-  SELECT ${brand2}
-  From ${TABLE}.products
+  union ${brand2}
+  union ${brand1}
+  from ${TABLE}.products
   ;;
 }
   dimension: cost {
