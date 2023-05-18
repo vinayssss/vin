@@ -39,10 +39,10 @@ dimension: unqiue {
   sql:
   SELECT ${brand} AS my_int
   FROM ${TABLE}.products
-  UNION
+  UNION ALL
   SELECT ${brand1} AS my_int
   From ${TABLE}.products
-  UNION
+  UNION ALL
   SELECT ${brand2} AS my_int
   From ${TABLE}.products
   ;;
