@@ -37,13 +37,13 @@ view: products {
 dimension: unqiue {
   type: string
   sql:
-  SELECT ${brand} AS my_int
+  SELECT ${brand}
   FROM ${TABLE}.products
-  UNION ALL
-  SELECT ${brand1} AS my_int
+  UNION
+  SELECT ${brand1}
   From ${TABLE}.products
   UNION ALL
-  SELECT ${brand2} AS my_int
+  SELECT ${brand2}
   From ${TABLE}.products
   ;;
 }
