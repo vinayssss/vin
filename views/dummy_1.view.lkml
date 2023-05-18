@@ -13,22 +13,20 @@ view: dummy_1 {
     description: ""
     type: number
     sql: ${TABLE}.id ;;
-    suggest_explore: order_items
+    #suggest_explore: order_items
   }
   filter: id_filter {
     type: number
-    suggest_dimension: dummy_1.id
+    #suggest_dimension: dummy_1.id
+
   }
   dimension: country {
     description: ""
     type: string
     sql: ${TABLE}.country ;;
-    suggest_explore: order_items
+    #suggest_explore: order_items
   }
-  filter: country_filter {
-    type: string
-    suggest_dimension: dummy_1.country
-  }
+
   dimension: total_sale_price {
     description: ""
     type: number

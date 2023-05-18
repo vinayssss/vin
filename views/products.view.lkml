@@ -22,7 +22,14 @@ view: products {
     type: string
     sql: ${TABLE}.brand ;;
   }
-
+  dimension: brand1 {
+    type: string
+    sql: ${TABLE}.brand ;;
+  }
+  dimension: brand2 {
+    type: string
+    sql: ${TABLE}.brand ;;
+  }
   dimension: category {
     type: string
     sql: ${TABLE}.category ;;
