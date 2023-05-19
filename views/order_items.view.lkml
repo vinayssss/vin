@@ -88,11 +88,19 @@ view: order_items {
     type: sum
     sql: ${sale_price} ;;
   }
-
+  # dimension: total_sale_prices {
+  #   type: sum
+  #   sql: ${sale_price} ;;
+  # }
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;
   }
+  # dimension: average_sale_prices {
+  #   type: average
+  #   sql: ${sale_price} ;;
+  # }
+
 
   dimension_group: shipped {
     type: time
