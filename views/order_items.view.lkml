@@ -132,7 +132,14 @@ view: order_items {
     type: count
     drill_fields: [detail*]
   }
-
+  measure: counts {
+    type: count
+#drill_fields: [id, orders.id, inventory_items.id]
+    html:
+    <p> {{ value }} </p>
+    <p style="color: red; font-size:50%; margin-left: 30px;">YOY % change<span style="color: green; font-size:80%; text-align:center">{{order_items.sale_price._value}}</span></p>
+    <p style="color: green; font-size:50%; margin-left: 30px;">MOM % change<span style="color: green; font-size:80%; text-align:center">{{order_items.sale_price._value}}</span></p> ;;
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
