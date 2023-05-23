@@ -114,7 +114,7 @@ view: inventory_items {
     sql: ${TABLE}.cost ;;
     html:
     {% if value <= 50 %}
-     <font style="color: light pink; font-size: 75%">{{ rendered_value }}</font>
+     <font style="color:brown; font-size: 75%">{{ rendered_value }}</font>
     {% elsif value <= 100 %}
      <font style="color: green; font-size:85%">{{ rendered_value }}</font>
     {% else %}
