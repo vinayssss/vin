@@ -91,6 +91,7 @@ dimension: unqiue {
   measure: count {
     type: count
     drill_fields: [detail*]
+    value_format: "kg"
   }
 
   # ----- Sets of fields for drilling ------
