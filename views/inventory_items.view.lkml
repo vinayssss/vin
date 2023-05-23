@@ -109,46 +109,20 @@ view: inventory_items {
     ]
     sql: ${TABLE}.sold_at ;;
   }
-#   dimension: chargeback_date
-#   {
-#     label: "Dispute Date" type: date
-#     sql: ${TABLE}.created_at ;;
-#   }
 
-#   parameter: date_granularity {
-#     type: unquoted
-#     allowed_value:
-#     {
-#       label: "Dispute Date"
-#       value: "chargeback_date"
-#     }
-
-#   }
-
-#   dimension: dates {
-#   sql:{% if vw_bi_sdm_retrievals_received.chargeback_date_filter._in_query %}
-# AND
-# chargeback_date >= (cast({% date_start vw_bi_sdm_retrievals_received.chargeback_date_filter %} as date))
-# and chargeback_date < DATE_ADD(cast((CASE WHEN {% date_end vw_bi_sdm_retrievals_received.chargeback_date_filter %} IS NULL THEN CURRENT_TIMESTAMP()
-# ELSE {% date_end vw_bi_sdm_retrievals_received.chargeback_date_filter %} END) as date), INTERVAL 1 DAY)
-# {% endif %};;
-#   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  measure: total {
+    type: sum
+    sql: ${TABLE}.cost ;;
+    html:
+    {% if value <= 50 %}
+     <font style="color:brown; font-size: 75%">{{ rendered_value }}</font>
+    {% elsif value <= 100 %}
+     <font style="color: green; font-size:85%">{{ rendered_value }}</font>
+    {% else %}
+     <font style="color: light blue; font-size:95%">{{ rendered_value }}</font>
+    {% endif %};;
+  }
+#>>>>>>> branch 'master' of git@github.com:vinayssss/vin.git
   measure: count {
     type: count
     drill_fields: [detail*]

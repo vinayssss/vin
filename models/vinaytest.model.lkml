@@ -186,6 +186,7 @@ explore: discounts {
 }
 
 explore: order_items {
+  sql_always_where: ${returned_date} >= '2022-12-31' ;;
   #persist_for: "2 hours"
   join: users {
     type: left_outer
