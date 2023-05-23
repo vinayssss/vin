@@ -87,11 +87,10 @@ view: order_items {
   measure: total_sale_price {
     type: sum
     sql: ${sale_price} ;;
+    value_format: "$#.00;($#.00)kg"
+
   }
-  # dimension: total_sale_prices {
-  #   type: sum
-  #   sql: ${sale_price} ;;
-  # }
+
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;
@@ -132,14 +131,7 @@ view: order_items {
     type: count
     drill_fields: [detail*]
   }
-#   measure: counts {
-#     type: count
-# #drill_fields: [id, orders.id, inventory_items.id]
-#     html:
-#     <p> {{ value }} </p>
-#     <p style="color: red; font-size:50%; margin-left: 30px;">YOY % change<span style="color: green; font-size:80%; text-align:center">{{order_items.sale_price._value}}</span></p>
-#     <p style="color: green; font-size:50%; margin-left: 30px;">MOM % change<span style="color: green; font-size:80%; text-align:center">{{order_items.sale_price._value}}</span></p> ;;
-#   }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
