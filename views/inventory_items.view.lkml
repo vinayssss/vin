@@ -109,6 +109,45 @@ view: inventory_items {
     ]
     sql: ${TABLE}.sold_at ;;
   }
+#   dimension: chargeback_date
+#   {
+#     label: "Dispute Date" type: date
+#     sql: ${TABLE}.created_at ;;
+#   }
+
+#   parameter: date_granularity {
+#     type: unquoted
+#     allowed_value:
+#     {
+#       label: "Dispute Date"
+#       value: "chargeback_date"
+#     }
+
+#   }
+
+#   dimension: dates {
+#   sql:{% if vw_bi_sdm_retrievals_received.chargeback_date_filter._in_query %}
+# AND
+# chargeback_date >= (cast({% date_start vw_bi_sdm_retrievals_received.chargeback_date_filter %} as date))
+# and chargeback_date < DATE_ADD(cast((CASE WHEN {% date_end vw_bi_sdm_retrievals_received.chargeback_date_filter %} IS NULL THEN CURRENT_TIMESTAMP()
+# ELSE {% date_end vw_bi_sdm_retrievals_received.chargeback_date_filter %} END) as date), INTERVAL 1 DAY)
+# {% endif %};;
+#   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   measure: count {
     type: count
