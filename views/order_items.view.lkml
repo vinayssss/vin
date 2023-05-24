@@ -133,29 +133,9 @@ view: order_items {
   }
 
 
-  dimension: chargeback_date
-  {
-    label: "Dispute Date" type: date
-    sql: ${TABLE}.created_at  ;;
-  }
 
-  dimension: chargeback_dates
-  {
-    label: "Dispute Dates"
-    type: date
-    sql:
-          {% if ${TABLE}.chargeback_date_filter._in_query %}
-          AND
-         chargeback_date >= (cast({% date_start ${TABLE}.chargeback_date_filter %} as date))
-          and chargeback_date < DATE_ADD(cast((CASE WHEN {% date_end ${TABLE}.chargeback_date_filter %} IS NULL THEN CURRENT_TIMESTAMP()
-          ELSE {% date_end ${TABLE}.chargeback_date_filter %} END) as date), INTERVAL 1 DAY)
-            {% endif %} ;;
 
-  }
-  filter: chargeback_date_filter
-  {
-    type: date
-  }
+
 
 
 
