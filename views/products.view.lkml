@@ -93,7 +93,10 @@ dimension: combine {
   sql: concat(${products.brand},",",${products.brand1},",",${products.brand2},"/",${products.brand},"&",${products.brand1},",",${products.brand2}) ;;
 }
 
-
+dimension: combines {
+  type: string
+  sql: replace(${combine},",",",  " );;
+}
 
 
   measure: count {
