@@ -31,27 +31,6 @@ view: order_items {
     sql: ${TABLE}.created_at ;;
   }
 
-  dimension_group: created2 {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.created_at ;;
-  }
-
-
-
-
-
-
-
-
 
 
   dimension_group: delivered {
@@ -156,19 +135,9 @@ view: order_items {
   }
 
 
-# measure: latest_date_count {
-#   type: count
-#   filters: [
-#     created_date: "latest"
 
 
 
-#   ]
-# }
-# measure: sceond_latest_count {
-#   type: count
-#   filters: [created_date: "second_latest"]
-# }
 
 
 
