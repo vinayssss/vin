@@ -251,3 +251,5 @@ explore: products {
   }
 }
 explore: dummy_1 {}
+
+explore: counts {}
