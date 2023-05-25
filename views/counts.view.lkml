@@ -5,7 +5,7 @@ view: counts {
         select created_at from order_items
           group by created_at
           order by created_at desc
-          limit 2)
+          )
           subquery
           group by created_at;;
   }
