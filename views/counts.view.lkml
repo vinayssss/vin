@@ -1,7 +1,12 @@
 view: counts {
   derived_table: {
     sql: select created_at, count (*) as id
-         from order_items
+         from (
+        select created_at from order_items
+          group by created_at
+          order by created_at desc
+          limit 2)
+          subquery
           group by created_at;;
   }
   # dimension: id {
