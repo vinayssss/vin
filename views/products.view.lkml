@@ -88,6 +88,14 @@ dimension: unqiue {
     sql: ${TABLE}.sku ;;
   }
 
+dimension: combine {
+  type: string
+  sql: concat(${products.brand},",",${products.brand1},",",${products.brand2},"/",${products.brand},"&",${products.brand1},",",${products.brand2}) ;;
+}
+
+
+
+
   measure: count {
     type: count
     drill_fields: [detail*]
