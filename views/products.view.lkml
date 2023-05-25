@@ -95,7 +95,7 @@ dimension: combine {
 
 dimension: combines {
   type: string
-  sql: replace(${combine},",",",  " );;
+  sql: replace(${combine},",",",         " );;
 }
 
 
