@@ -55,6 +55,11 @@ view: inventory_items {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: quarter {
+    type: string
+    sql: ${TABLE}.created_at ;;
+  }
+
   dimension: product_brand {
     type: string
     sql: ${TABLE}.product_brand ;;
