@@ -64,11 +64,8 @@ view: inventory_items {
     case_sensitive: no
     type: string
     sql: ${TABLE}.product_brand;;
-    link: {
-      url: "http://www.google.com/search?q={{ value }}"
-      icon_url: "http://google.com/favicon.ico"
-
-  }}
+    html: <a href="https.//www.google.com/?search?q={{value}}"> {{value}} </a> ;;
+   }
 
   dimension: product_category {
     type: string
