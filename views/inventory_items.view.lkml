@@ -57,7 +57,7 @@ view: inventory_items {
 
   dimension: product_brand {
     link: {
-      label: "Google"
+      label: "dresses"
       url: "http://www.google.com/search?q={{ value }}"
       icon_url: "http://google.com/favicon.ico"
 
