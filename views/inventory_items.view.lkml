@@ -54,6 +54,11 @@ view: inventory_items {
     datatype: date
     sql: ${TABLE}.created_at ;;
   }
+  dimension: date_qtr {
+    type: date_fiscal_quarter_of_year
+    sql: ${TABLE}.created_at ;;
+    }
+
 
   dimension: product_brand {
     link: {
