@@ -103,7 +103,12 @@ dimension: combines {
   measure: count {
     type: count
     drill_fields: [id,brand]
+    link: {
+      label: "Explore Top 20 Results"
+      url: "{{ link }}&limit=20"
+      }
     value_format: "0 \" kg\""
+
   }
 
   # ----- Sets of fields for drilling ------
