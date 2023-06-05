@@ -63,7 +63,7 @@ view: inventory_items {
   dimension: product_brand {
     case_sensitive: no
     type: string
-    sql: ${TABLE}.product;;
+    sql: ${TABLE}.product_brand;;
     link: {
       url: "http://www.google.com/search?q={{ value }}"
       icon_url: "http://google.com/favicon.ico"
