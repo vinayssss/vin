@@ -21,6 +21,7 @@ view: products {
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
+    drill_fields: [id,department]
   }
   dimension: brand1 {
     type: string
