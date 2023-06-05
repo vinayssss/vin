@@ -102,7 +102,7 @@ dimension: combines {
 
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [id,brand]
     value_format: "0 \" kg\""
   }
 
